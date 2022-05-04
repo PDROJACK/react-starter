@@ -20,14 +20,10 @@ export const productSlice = createSlice({
         getProducts: (state, action: PayloadAction<string>) => {
             // find product by movie id
             // state.products = [ "n1", "n2", "n3" ]
-        
         },
-
         addProduct: (state, action: PayloadAction<number>) => {
             // Get Input about product and add it to DB
-
         }
-
     }
 
 })

@@ -28,8 +28,6 @@ const rows = [
 export default function Products() {
   return (
       <Grid>
-
-          
         <Grid container direction="row">
 
         <Grid item lg={1} />
@@ -56,7 +54,7 @@ export default function Products() {
       </Typography>
 
         </Grid>
-      <Grid container direction="column">
+        <Grid container direction="column">
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="caption table">
             <caption>Table of products</caption>
@@ -86,6 +84,6 @@ export default function Products() {
         </TableContainer>
       </Grid>
     
-    </Grid>
+      </Grid>
   );
 }
