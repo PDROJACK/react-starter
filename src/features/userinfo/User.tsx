@@ -9,7 +9,7 @@ const Img = styled('img')({
     width: "100"
     // maxWidth: '100%',
     // maxHeight: '100%',
-  });
+});
 
 type Link = {
     website: string,
@@ -48,7 +48,7 @@ const LinkComponent = ({ website, url }: Link) => {
         <Grid onClick={()=>console.log("hello")} style={{
             border: "2 solid black"
         }}>
-            <Img src="https://via.placeholder.com/35"/>
+        <Img src="https://via.placeholder.com/35"/>
             {/* <Typography>{website}</Typography> */}
         </Grid>
     )
@@ -91,7 +91,6 @@ const User = () => {
                     <Grid item marginTop={1} marginBottom={1}>
                     Most importantly, we hope people love the tool and find it useful. For me, it’s the most delightful thing to play with we’ve created so far. I find it to be creativity-enhancing, helpful for many different situations, and fun in a way I haven’t felt from technology in a while.
 But I also think it’s noteworthy for a few reasons:
-
                     </Grid>
 
                     <Grid container justifyItems="flex-start" direction="row">

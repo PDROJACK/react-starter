@@ -4,6 +4,7 @@ import User from "../features/userinfo/User";
 import Selector from "../components/Selector";
 import { Divider } from "@mui/material";
 import Posts from "../features/posts/Posts";
+import Links from "../features/links/Links";
 
 const Homepage = () => {
 
@@ -23,8 +24,8 @@ const Homepage = () => {
     <Grid justifyContent="center" container>
       {
         page === "posts" ?
-        <Posts/> :
-        <h1>Links</h1>
+        <Posts /> :
+        <Links />
       }
     </Grid>
 

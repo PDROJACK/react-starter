@@ -5,24 +5,35 @@ type Link = {
     website: string,
     url: string
 }
-
 export interface Post {
+    id: string,
     username: string,
     instagram: string,
     links: Link[],
     email: string,
-    profile: string
+    profile: string,
+    content: string
 }
 
-const initialState: Post = {
-    username: "pdrojack",
-    instagram: "pdrojack",
-    links: [{
-        website: "spotify",
-        url: "http://spotify.com/pdrojac"
-    }],
-    email: "pdro@jack.com",
-    profile: "profile.photo"
+type IinitialStateType = {
+    modal: boolean,
+    posts: Post[]
+}
+
+const initialState: IinitialStateType = {
+    modal: false,
+    posts : [{
+        id: "1",
+        username: "pdrojack",
+        instagram: "pdrojack",
+        links: [{
+            website: "spotify",
+            url: "http://spotify.com/pdrojac"
+        }],
+        email: "pdro@jack.com",
+        profile: "profile.photo",
+        content: "Hello this is mellow"
+    }]
 }
 
 export const postSlice = createSlice({
@@ -32,21 +43,26 @@ export const postSlice = createSlice({
     initialState,
 
     reducers: {
-        
+
+        flipModal: (state) => {
+            state.modal = !state.modal
+        },
+
         getProducts: (state, action: PayloadAction<string>) => {
             // find product by movie id
-        
         },
 
         addProduct: (state, action: PayloadAction<number>) => {
             // Get Input about product and add it to DB
-
         }
 
     }
 
 })
 
-export const {getProducts, addProduct} = postSlice.actions;
+export const selectPosts = (state: RootState) => state.post.posts;
+export const selectModal = (state: RootState) => state.post.modal;
+
+export const {getProducts, addProduct, flipModal} = postSlice.actions;
 
 export default postSlice.reducer;
