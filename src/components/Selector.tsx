@@ -26,6 +26,7 @@ const Selector = (props: { setPage: Function; page: string }) => {
   }));
 
   return (
+    <Grid container justifySelf={"center"} justifyContent={"center"} alignItems={"center"}>
     <Stack direction="row" spacing={10}>
       <Item
         style={{
@@ -60,6 +61,7 @@ const Selector = (props: { setPage: Function; page: string }) => {
         </Grid>
       </Item>
     </Stack>
+    </Grid>
   );
 };
 

@@ -80,7 +80,7 @@ const postData: Post[] =
 const Posts = () => {
     const dispatch = useAppDispatch();
     return (
-        <>
+        <Grid container justifyContent={"center"}>
         <Grid lg={8} md={10} sm={10} xs={12}>
             <ImageList cols={3}>
                 {/* <ImageListItem key="Subheader" cols={3}>
@@ -103,7 +103,7 @@ const Posts = () => {
             </ImageList>
         </Grid>
         <PostModal/>
-        </>
+        </Grid>
     )
 }
 
