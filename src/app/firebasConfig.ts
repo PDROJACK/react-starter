@@ -14,11 +14,10 @@ const firebaseConfig = {
   storageBucket: "fuzgram.appspot.com",
   messagingSenderId: "949761942508",
   appId: "1:949761942508:web:0d282a8dc23884b1e916c9",
-  measurementId: "G-R7NTXGD5RB"
+  measurementId: "G-R7NTXGD5RB",
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth(app);
-

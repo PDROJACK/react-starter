@@ -6,10 +6,9 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import React, { useState } from "react";
 
-import InsertPhotoIcon from "@material-ui/icons/InsertPhoto";
 import InsertLinkIcon from "@material-ui/icons/InsertLink";
+import InsertPhotoIcon from "@material-ui/icons/InsertPhoto";
 
 const Selector = (props: { setPage: Function; page: string }) => {
   const { setPage, page } = props;
@@ -26,41 +25,46 @@ const Selector = (props: { setPage: Function; page: string }) => {
   }));
 
   return (
-    <Grid container justifySelf={"center"} justifyContent={"center"} alignItems={"center"}>
-    <Stack direction="row" spacing={10}>
-      <Item
-        style={{
-          color:
-            page === "posts"
-              ? theme.palette.text.primary
-              : theme.palette.text.secondary,
-         borderBottom:  page === "posts" ? "3px solid black" : ""
-        }}
-        onClick={() => setPage("posts")}
-        elevation={0}
-      >
-        <Grid container direction="row">
-          <InsertPhotoIcon />
-          <Typography>POSTS</Typography>
-        </Grid>
-      </Item>
-      <Item
-        style={{
-          color:
-            page === "links"
-              ? theme.palette.text.primary
-              : theme.palette.text.secondary,
-            borderBottom:  page === "links" ? "3px solid black" : ""
-        }}
-        onClick={() => setPage("links")}
-        elevation={0}
-      >
-        <Grid container direction="row">
-          <InsertLinkIcon />
-          <Typography>LINKS</Typography>
-        </Grid>
-      </Item>
-    </Stack>
+    <Grid
+      container
+      justifySelf={"center"}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
+      <Stack direction="row" spacing={10}>
+        <Item
+          style={{
+            color:
+              page === "posts"
+                ? theme.palette.text.primary
+                : theme.palette.text.secondary,
+            borderBottom: page === "posts" ? "3px solid black" : "",
+          }}
+          onClick={() => setPage("posts")}
+          elevation={0}
+        >
+          <Grid container direction="row">
+            <InsertPhotoIcon />
+            <Typography>POSTS</Typography>
+          </Grid>
+        </Item>
+        <Item
+          style={{
+            color:
+              page === "links"
+                ? theme.palette.text.primary
+                : theme.palette.text.secondary,
+            borderBottom: page === "links" ? "3px solid black" : "",
+          }}
+          onClick={() => setPage("links")}
+          elevation={0}
+        >
+          <Grid container direction="row">
+            <InsertLinkIcon />
+            <Typography>LINKS</Typography>
+          </Grid>
+        </Item>
+      </Stack>
     </Grid>
   );
 };

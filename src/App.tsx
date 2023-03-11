@@ -2,17 +2,16 @@ import "./App.css";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { store } from "./app/store";
-import Homepage from "./screens/Homepage";
 import { ProtectedRoute } from "./navigation/ProtectedRoute";
 import UserLoginSignUp from "./components/UserLoginSignUp";
 import Verification from "./screens/Verification";
-import Homepage2 from "./screens/Homepage2";
+import HomePage from "./screens/Homepage";
 import AuthPage from "./screens/AuthPage";
 
 const rootAdminRouter = createBrowserRouter([
   {
     path: "/",
-    element: <ProtectedRoute children={<Homepage2 />} />,
+    element: <ProtectedRoute children={<HomePage />} />,
   },
   {
     path: "/login",
@@ -24,12 +23,12 @@ const rootAdminRouter = createBrowserRouter([
   },
   {
     path: "/verification",
-    element: <Verification />
+    element: <Verification />,
   },
   {
     path: "/oauth",
-    element: <ProtectedRoute children={<AuthPage/>} />
-  }
+    element: <ProtectedRoute children={<AuthPage />} />,
+  },
 ]);
 
 function App() {
